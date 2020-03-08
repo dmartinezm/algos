@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/dmartinezm/algos#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.1",
     "jest": "^25.1.0"

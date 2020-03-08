@@ -36,9 +36,10 @@ function palindrome_3(s) {
   });
 }
 
-console.log(palindrome_1("kayak"));
-console.log(palindrome_2("kayak"));
-console.log(palindrome_3("kayak"));
+// console.log(palindrome_1("kayak"));
+// console.log(palindrome_2("kayak"));
+// console.log(palindrome_3("kayak"));
 
-// export default palindrome;
-// module.exports = palindrome;
+module.exports = palindrome_1;
+module.exports = palindrome_2;
+// module.exports = palindrome_3;
