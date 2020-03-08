@@ -26,7 +26,7 @@ function palindrome_2(s) {
   sArray.forEach((ele, i) => {
     return ele === sArray[sArray.length - i - 1] ? 0 : ans++;
   });
-  return ans === 0 ? false : true;
+  return ans === 0 ? true : false;
 }
 
 function palindrome_3(s) {
