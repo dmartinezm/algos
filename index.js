@@ -26,7 +26,7 @@ function palindrome_2(s) {
   sArray.forEach((ele, i) => {
     return ele === sArray[sArray.length - i - 1] ? 0 : ans++;
   });
-  return ans === 0 ? true : false;
+  return ans === 0 ? false : true;
 }
 
 function palindrome_3(s) {
@@ -40,6 +40,4 @@ function palindrome_3(s) {
 // console.log(palindrome_2("kayak"));
 // console.log(palindrome_3("kayak"));
 
-module.exports = palindrome_1;
-// module.exports = palindrome_2;
-// module.exports = palindrome_3;
+module.exports = { palindrome_1, palindrome_2, palindrome_3 };
