@@ -1,30 +1,42 @@
-const p = require("./index");
+const index = require("./index");
 
 const testCasesTrue = ["kayak", "rotor", "madam"];
 const testCasesFalse = ["kayak ", " rotor", "mad.am"];
 
 test("palindrome_1 is a function", () => {
-  expect(typeof p.palindrome_1).toEqual("function");
+  expect(typeof index.p1).toEqual("function");
+});
+test("palindrome_2 is a function", () => {
+  expect(typeof index.p2).toEqual("function");
+});
+test("palindrome_3 is a function", () => {
+  expect(typeof index.p3).toEqual("function");
 });
 
 describe("test palindrome functions (1,2,3) to True", () => {
   testCasesTrue.forEach(c => {
     test(c + " is a palindrome_1", () => {
-      expect(p.palindrome_1(c)).toBeTruthy();
+      expect(index.p1(c)).toBeTruthy();
     });
     test(c + " is a palindrome_2", () => {
-      expect(p.palindrome_2(c)).toBeTruthy();
+      expect(index.p2(c)).toBeTruthy();
     });
     test(c + " is a palindrome_3", () => {
-      expect(p.palindrome_3(c)).toBeTruthy();
+      expect(index.p3(c)).toBeTruthy();
     });
   });
 });
 
 describe("test palindrome functions (1,2,3) to False", () => {
-  testCasesFalse.forEach(c =>
+  testCasesFalse.forEach(c => {
     test(c + " is not a palindrome", () => {
-      return expect(palindrome_1(c)).toBeFalsy();
-    })
-  );
+      expect(index.p1(c)).toBeFalsy();
+    });
+    test(c + " is not a palindrome", () => {
+      expect(index.p3(c)).toBeFalsy();
+    });
+    test(c + " is not a palindrome", () => {
+      expect(index.p3(c)).toBeFalsy();
+    });
+  });
 });
