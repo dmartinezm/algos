@@ -1,4 +1,4 @@
-const index = require("./index");
+const index = require("./palindrome");
 
 const testCasesTrue = ["kayak", "rotor", "madam"];
 const testCasesFalse = ["kayak ", " rotor", "mad.am"];
