@@ -1,0 +1,29 @@
+{
+  "name": "algos-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmartinezm/algos.git"
+  },
+  "author": "Diego Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmartinezm/algos/issues"
+  },
+  "homepage": "https://github.com/dmartinezm/algos#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "node": "^12.16.1"
+  }
+}
