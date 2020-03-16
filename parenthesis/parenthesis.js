@@ -3,7 +3,19 @@
 // example : {[()]} -> YES {[(])} -> NO {{[[(())]]}} -> YES
 
 function isBalanced(s) {
-  return s;
+  const sp = s.split(" ");
+  let stack = [];
+
+  for (let ele of sp) {
+    if (ele === "[" || ele === "(" || ele === "{") {
+      stack.push(ele);
+    } else {
+      if (stack.length !== 0 && isPair(stack[stack.length - 1], ele)) {
+        stack.pop();
+      }
+    }
+  }
+  return stack.length === 0 ? "YES" : "NO";
 }
 
 function isPair(left, right) {
