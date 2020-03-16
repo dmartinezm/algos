@@ -11,13 +11,17 @@ function isBalanced(s) {
       stack.push(ele);
       console.log("insert to stack " + stack);
     } else {
-      if (stack.length !== 0 && isPair(stack[stack.length - 1], ele)) {
+      if (stack.length !== 0 && isPair(peek(stack), ele)) {
         stack.pop();
         console.log("removed from stack " + stack);
       }
     }
   }
   return stack.length === 0 ? "YES" : "NO";
+}
+
+function peek(stack) {
+  return stack[stack.length - 1];
 }
 
 function isPair(left, right) {
