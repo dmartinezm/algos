@@ -6,4 +6,12 @@ function isBalanced(s) {
   return s;
 }
 
+function isPair(left, right) {
+  return (
+    (left === "(" && right === ")") ||
+    (left === "[" && right === "]") ||
+    (left === "{" && right === "}")
+  );
+}
+
 module.exports = isBalanced;
