@@ -9,11 +9,13 @@ function isBalanced(s) {
   for (let ele of sp) {
     if (ele === "[" || ele === "(" || ele === "{") {
       stack.push(ele);
-      console.log("insert to stack " + stack);
+      //   console.log("insert to stack " + stack);
     } else {
       if (stack.length !== 0 && isPair(peek(stack), ele)) {
         stack.pop();
-        console.log("removed from stack " + stack);
+        // console.log("removed from stack " + stack);
+      } else {
+        stack.push(ele);
       }
     }
   }
