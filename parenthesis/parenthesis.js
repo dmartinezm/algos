@@ -15,11 +15,37 @@ function isBalanced(s) {
         stack.pop();
         // console.log("removed from stack " + stack);
       } else {
+        // this is needed to keep track of right characters that don't match
         stack.push(ele);
       }
     }
   }
   return stack.length === 0 ? "YES" : "NO";
+
+  var result = "YES";
+  var stack = [];
+  s.split("").forEach(function(val) {
+    switch (val) {
+      case "{":
+        stack.push("}");
+        break;
+      case "[":
+        stack.push("]");
+        break;
+      case "(":
+        stack.push(")");
+        break;
+      default:
+        var test = stack.pop();
+        if (val !== test) {
+          result = "NO";
+        }
+    }
+  });
+  if (stack.length) {
+    result = "NO";
+  }
+  return result;
 }
 
 function peek(stack) {

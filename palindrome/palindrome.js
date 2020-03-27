@@ -23,12 +23,16 @@ function palindrome_1(s) {
 // a(0) === b(b.length - 1) ?
 
 function palindrome_2(s) {
-  const sArray = s.toLowerCase().split("");
+  // const sArray = s.toLowerCase().split("");
   let ans = 0;
-  sArray.forEach((ele, i) => {
-    return ele === sArray[sArray.length - i - 1] ? 0 : ans++;
-  });
-  return ans === 0 ? true : false;
+  // sArray.forEach((ele, i) => {
+  //   return ele === sArray[sArray.length - i - 1] ? 0 : ans++;
+  // });
+  // return ans === 0 ? true : false;
+  for (let i = 0; i < s.length; i++) {
+    s[i].toLowerCase() === s[s.length - i - 1].toLowerCase ? 0 : ans++;
+  }
+  console.log(ans);
 }
 
 function palindrome_3(s) {
@@ -38,8 +42,8 @@ function palindrome_3(s) {
   });
 }
 
-console.log(palindrome_1("kayaK"));
+// console.log(palindrome_1("kayaK"));
 console.log(palindrome_2("Kayak"));
-console.log(palindrome_3("kaYak"));
+// console.log(palindrome_3("kaYak"));
 
 module.exports = { p1: palindrome_1, p2: palindrome_2, p3: palindrome_3 };

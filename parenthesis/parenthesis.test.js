@@ -19,3 +19,11 @@ test("Test {{[[(())]]}} if it's balanced -> YES", () => {
 test("Test {(([])[])[]]} if it's balanced -> NO", () => {
   expect(balanced("{(([])[])[]]}")).toEqual("NO");
 });
+
+test("Test {(([])[])[]]} if it's balanced -> NO", () => {
+  expect(balanced("{(([])[])[]]}")).toEqual("NO");
+});
+
+test("Test {(([])[])[]]} if it's balanced -> NO", () => {
+  expect(balanced("{(([])[])[]]}")).toEqual("NO");
+});
